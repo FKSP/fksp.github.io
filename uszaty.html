@@ -1,0 +1,41 @@
+<script>
+var liczba=(prompt("Podaj liczbe"))*1;
+var poczatek=liczba-10;
+var koniec=liczba+10;
+var pc=0;
+var npc=0;
+var pz=0;
+var npz=0;
+for(var i=poczatek; i<=koniec; i++){
+if(i<liczba){
+	document.write("<font color='red'>"+i+"</font>, ");
+	if(i%2==0 && i!=0){
+		pc++;
+	} else if(i==0){
+	} else{
+		npc++;
+	}
+} else if(i>liczba){
+	document.write("<font color='green'>"+i+"</font>, ");
+	if(i%2==0 && i!=0){
+		pz++;
+	} else if(i==0){
+	} else{
+		npz++;
+	}
+} else {
+	document.write("<font color='blue'>"+i+"</font>, ");
+}
+}
+document.write("<br>Ilość liczb parzystych czerwonych: ");
+document.write(pc);
+document.write("<br>Ilość liczb nieparzystych czerwonych: "+npc);
+document.write("<br>Ilość liczb parzystych zielonych: "+pz);
+document.write("<br>Ilość liczb nieparzystych zielonych: "+npz);
+document.write("<br>Niebieska liczba jest ");
+if(liczba%2==0){
+document.write("parzysta");
+} else {
+document.write("nieparzysta");
+}
+</script>
